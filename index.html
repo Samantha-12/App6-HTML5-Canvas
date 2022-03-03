@@ -79,6 +79,15 @@ var a_canvas = document.getElementById("a"); //defines my canvas
 		ctx.font = "bold 12px sans-serif"; //provides the font for the text of the name
 		ctx.fillText("Samantha", 10, 50); //provides the dimensions and size of the text of the name
 		}
+		
+	function draw_Image() { 
+		img.src='https://cdn10.bigcommerce.com/s-npe4l/products/1156/images/1334/B-MZ-SMIL---HIGH__77902.1477602946.1280.1280.jpg?c=2';
+		img.onload = function () {
+		var a_canvas = document.getElementByID("a"); // establishes the image inside the canvas
+		var a_context = Image_canvas.getContext("2d"); // establishes the image in a 2d manner
+		ctx.drawImage(img, 520, 90, 250, 250);
+		}
+		}
 	</script>
 
 <body>
@@ -91,6 +100,7 @@ var a_canvas = document.getElementById("a"); //defines my canvas
 	<canvas id= "a" width="300" height="225" style="border:1px solid #000000;"></canvas> <!--Added a code that produces a border around the edge of the canvas. Makes a rectangle with a black border.-->	
 	<p><a onclick="draw_b();"class="w3-btn w3-black"> Draw Rectangle </a><p> <!--Button that calls the draw rectangle function.--> 
 	<p><a onclick="draw_Text();"class="w3-btn w3-black"> Draw Name </a><p> <!--Button that calls the draw name function.-->
+	<p><a onclick="draw_Image();"class="w3-btn w3-black"> Image </a><p> 
 							 
 	
 		
