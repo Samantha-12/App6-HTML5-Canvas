@@ -40,18 +40,18 @@ alert("This file last modified " + docMod); // generates alert box with time sta
 console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
 </script>
 <script>
-function draw_rectangle() { //<!--Function that calls the rectangle to be drawn on the canvas.-->
-var rectangle_canvas = document.getElementByID("myCanvas"); //establishes the rectangle variable inside the canvas so that it is drawn on the canvas 
-var rectangle_context = rectangle_canvas.getContext("2d"); //establishes the rectangle in a 2d manner
-rectangle_contextctx.fillRect(50, 25, 50, 75) //gives the starting x and y coordinates of the rectangle and defines the width and height of the rectangle	
+function draw_rectangle() { 
+	var rectangle_canvas = document.getElementByID("myCanvas"); //establishes the rectangle variable inside the canvas so that it is drawn on the canvas 
+	var rectangle_context = rectangle_canvas.getContext("2d"); //establishes the rectangle in a 2d manner
+	rectangle_contextctx.fillRect(50, 25, 50, 75) //gives the starting x and y coordinates of the rectangle and defines the width and height of the rectangle	
 	}
 </script>
 <script>
-function draw_name() { //<!--Function that calls the name to be written on the canvas.-->
-var name_canvas = document.getElementByID("myCanvas"); //establishes the name inside the canvas so that the name is written in the canvas
-var name_context = name_canvas.getContext("2d"); //establishes the name in a 2d manner
-name_context.font = "bold 12px sans-serif"; //provides the font for the text of the name
-name_context.fillText("Samantha", 10, 50); //provides the dimensions and size of the text of the name
+function draw_name() { 
+	var name_canvas = document.getElementByID("myCanvas"); //establishes the name inside the canvas so that the name is written in the canvas
+	var name_context = name_canvas.getContext("2d"); //establishes the name in a 2d manner
+	name_context.font = "bold 12px sans-serif"; //provides the font for the text of the name
+	name_context.fillText("Samantha", 10, 50); //provides the dimensions and size of the text of the name
 	}
 </script>
 <!--<script> 	
