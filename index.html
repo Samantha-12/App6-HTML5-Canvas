@@ -40,10 +40,6 @@ alert("This file last modified " + docMod); // generates alert box with time sta
 console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
 </script>
 
-<script>
-var a_canvas = document.getElementById("a"); //defines my canvas
-</script>
-
 <style>	
 .body {
      margin: 0em;
@@ -64,40 +60,40 @@ var a_canvas = document.getElementById("a"); //defines my canvas
 }
 </style>
 	
-	<script>
-	function draw_b() { 
-		var a_canvas = document.getElementById("a"); //establishes the rectangle variable inside the canvas so that it is drawn on the canvas 
-		var a_context = a_canvas.getContext("2d"); //establishes the rectangle in a 2d manner
-		a_context.fillRect(50, 25, 50, 75) //gives the starting x and y coordinates of the rectangle and defines the width and height of the rectangle	
+<script>
+	function myFunction() { 
+		var c = document.getElementById("myCanvas"); //establishes the rectangle variable inside the canvas so that it is drawn on the canvas 
+		var a_context = myCanvas.getContext("2d"); //establishes the rectangle in a 2d manner
+		a_context.fillRect(20, 20, 250, 150) //gives the starting x and y coordinates of the rectangle and defines the width and height of the rectangle	
 		}
 	
 	
 	
-	function draw_Text() { 
-		var c = document.getElementById("a"); //establishes the name inside the canvas so that the name is written in the canvas
-		var ctx = c.getContext("2d"); //establishes the name in a 2d manner
+	function myName() { 
+		var canvas = document.getElementById("myCanvas"); //establishes the name inside the canvas so that the name is written in the canvas
+		var ctx = canvas.getContext("2d"); //establishes the name in a 2d manner
 		ctx.font = "bold 12px sans-serif"; //provides the font for the text of the name
 		ctx.fillText("Samantha", 10, 50); //provides the dimensions and size of the text of the name
 		}
 		
-	function draw_Image() { 
-		var egg = new Image();
-		var img=document.createElement('img');
+	function myCanvas() { 
+		var img=document.createElement('egg');
 		egg.src='2ee253d603bb1be4fda8c54a929dbcdb.png';
 		egg.onload = function () {
-		var a_canvas = document.getElementById('a'); // establishes the image inside the canvas
-		var a_context = a_canvas.getContext('2d'); // establishes the image in a 2d manner
-		a_context.drawImage(img,60,35,60,75);
+		var egg = new Image();
+		var c= document.getElementById('myCanvas'); // establishes the image inside the canvas
+		var ctx= c.getContext('2d'); // establishes the image in a 2d manner
+		ctx.drawImage(img,520,90,250,250);
 		}
 		}
 		
 	function clearAll() {
-		var c=document.getElementById(“a”);
-		var context=c.getContext(“2d”);
-		c.clearRect(0,0,a.width,a.height);
+		var canvas=document.getElementById(“myCanvas”);
+		var context=canvas.getContext(“2d”);
+		context.clearRect(0,0,a.width,a.height);
 		}
 		
-	</script>
+</script>
 
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
@@ -106,10 +102,10 @@ var a_canvas = document.getElementById("a"); //defines my canvas
 
 <div id="content" class="w3-container">
 	<p>Click on the below buttons to draw on the canvas!</p> <!--Below is the code for the border of the canvas and all of the buttons.-->
-	<canvas id= "a" width="300" height="225" style="border:1px solid #000000;"></canvas> <!--Added a code that produces a border around the edge of the canvas. Makes a rectangle with a black border.-->	
-	<p><a onclick="draw_b();"class="w3-btn w3-black"> Draw Rectangle </a><p> <!--Button that calls the draw rectangle function.--> 
-	<p><a onclick="draw_Text();"class="w3-btn w3-black"> Draw Name </a><p> <!--Button that calls the draw name function.-->
-	<p><a onclick="draw_Image()"class="w3-btn w3-black"> Display Image </a><p> 
+	<canvas id= "myCanvas" width="800" height="400" style="border:1px solid #000000;"></canvas> <!--Added a code that produces a border around the edge of the canvas. Makes a rectangle with a black border.-->	
+	<p><a onclick="myFunction();"class="w3-btn w3-black"> Draw Rectangle </a><p> <!--Button that calls the draw rectangle function.--> 
+	<p><a onclick="myName();"class="w3-btn w3-black"> Draw Name </a><p> <!--Button that calls the draw name function.-->
+	<p><a onclick="myCanvas()"class="w3-btn w3-black"> Display Image </a><p> 
 	<p><a onclick="clearAll();"class="w3-btn w3-black"> Clear All </a><p>
 							 
 	
