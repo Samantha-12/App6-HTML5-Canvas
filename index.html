@@ -82,7 +82,7 @@ var s_canvas = document.getElementById("s");
 		
 <script>
 	function draw_Image() { 
-		var s_canvas = document.getElementbyId("s");
+		var s_canvas = document.getElementById("s");
 		var s_context = s_canvas.getContext("2d");
 		var egg = new Image();
 		egg.src = "egg.png";
@@ -107,7 +107,7 @@ var s_canvas = document.getElementById("s");
 <div id="content" class="w3-container">
 	<p>Click on the below buttons to draw on the canvas!</p> <!--Below is the code for the border of the canvas and all of the buttons.-->
 	<canvas id= "s" width="800" height="400" style="border:1px solid #000000;"></canvas> <!--Added a code that produces a border around the edge of the canvas. Makes a rectangle with a black border.-->	
-	<p><a onclick="draw_b();" class="w3-btn w3-black"> Draw Rectangle </a><p> <!--Button that calls the draw rectangle function.--> 
+	<p><a onclick="draw_a();" class="w3-btn w3-black"> Draw Rectangle </a><p> <!--Button that calls the draw rectangle function.--> 
 	<p><a onclick="draw_Name();" class="w3-btn w3-black"> Draw Name </a><p> <!--Button that calls the draw name function.-->
 	<p><a onclick="draw_Image();" class="w3-btn w3-black"> Display Image </a><p> 
 	<p><a onclick="clear_Canvas();" class="w3-btn w3-black"> Clear All </a><p>
