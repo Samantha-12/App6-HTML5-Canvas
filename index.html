@@ -39,6 +39,10 @@ var docMod = document.lastModified; // loads last modified time stamp into docMo
 alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
 console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
 </script>
+	
+<script>
+var myCanvas_canvas = document.getElementById("myCanvas");
+</script>
 
 <style>	
 .body {
@@ -67,11 +71,9 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 		a_context.fillRect(20, 20, 250, 150) //gives the starting x and y coordinates of the rectangle and defines the width and height of the rectangle	
 		}
 	
-	
-	
 	function myName() { 
 		var canvas = document.getElementById("myCanvas"); //establishes the name inside the canvas so that the name is written in the canvas
-		var ctx = canvas.getContext("2d"); //establishes the name in a 2d manner
+		var ctx=canvas.getContext("2d"); //establishes the name in a 2d manner
 		ctx.font = "bold 12px sans-serif"; //provides the font for the text of the name
 		ctx.fillText("Samantha", 10, 50); //provides the dimensions and size of the text of the name
 		}
