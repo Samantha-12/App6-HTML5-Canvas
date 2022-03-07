@@ -17,10 +17,10 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-blah, blah, blah,
+The goal of the code is to produce a canvas with a border where, depending on what button is pressed, either a rectangle, name, or image is drawn onto the canvas. The goal was also to create a button that when pressed clears the canvas of anything drawn on it.
  
 Known Issues:
-blah, blah, blah, blah
+One known issue was trying to get my image to pop-up. I was not correctly defining the image in the function so when the draw image button was pressed nothing popped up. This was because my image was not uploaded to GitHub and therefore the function had nothing to produce. Another issue I ran into was trying to make the clear canvas button work. Everytime the button was originally clicked the canvas would not clear and all of the drawings would still be present. This was because my function and button were not properly defined and linked in the code.
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
 -->
@@ -40,7 +40,7 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 </script>
 	
 <script>
-var s_canvas = document.getElementById("s");
+var s_canvas = document.getElementById("s"); //defines the canvas and the Id it is associated with ("s")
 </script>
 
 <style>	
@@ -64,7 +64,7 @@ var s_canvas = document.getElementById("s");
 </style>
 	
 <script>
-	function draw_a() { 
+	function draw_a() { //function that will draw the rectangle
 		var s_canvas = document.getElementById("s"); //establishes the rectangle variable inside the canvas so that it is drawn on the canvas 
 		var s_context = s_canvas.getContext("2d"); //establishes the rectangle in a 2d manner
 		s_context.fillRect(70, 70, 250, 150) //gives the starting x and y coordinates of the rectangle and defines the width and height of the rectangle	
@@ -72,7 +72,7 @@ var s_canvas = document.getElementById("s");
 </script>	
 
 <script>
-	function draw_Name() { 
+	function draw_Name() { //function that will draw the name
 		var c = document.getElementById("s"); //establishes the name inside the canvas so that the name is written in the canvas
 		var ctx=c.getContext("2d"); //establishes the name in a 2d manner
 		ctx.font = "bold 12px sans-serif"; //provides the font for the text of the name
@@ -81,36 +81,36 @@ var s_canvas = document.getElementById("s");
 </script>
 		
 <script>
-	function draw_Image() { 
-		var s_canvas = document.getElementById("s");
-		var s_context = s_canvas.getContext("2d");
-		var egg = new Image();
-		egg.src = "Egg.png";
+	function draw_Image() { //function that will produce the image
+		var s_canvas = document.getElementById("s"); //establishes the image variable inside the canvas so that it is drawn on the canvas
+		var s_context = s_canvas.getContext("2d"); //establishes the image in a 2d manner
+		var egg = new Image(); //defines the variable for the image to be drawn on the canvas 
+		egg.src = "Egg.png"; //specifies the url of the image that was uploaded to GitHub and links to the image variable defined on the line above
 		egg.onload = function() {
-			s_context.drawImage(egg, 0, 0);
+			s_context.drawImage(egg, 0, 0); //produces the image on the canvas
 			};
 		}
 </script>
 	
 <script>	
-	function clear_Canvas() {
-		var s_canvas = document.getElementById("s");
-		s_canvas.width = s_canvas.width;
+	function clear_Canvas() { //function that will clear the canvas
+		var s_canvas = document.getElementById("s"); //establishes the clear_Canvas function within the canvas
+		s_canvas.width = s_canvas.width; //defines that the whole canvas should be cleared when the button is pressed
 		}		
 </script>
 
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
-	<h1>App6---HTML5-Canvas</h1>
+	<h1>App6---HTML5-Canvas</h1> <!--Title of the app.-->
 </div>
 
 <div id="content" class="w3-container">
 	<p>Click on the below buttons to draw on the canvas!</p> <!--Below is the code for the border of the canvas and all of the buttons.-->
-	<canvas id= "s" width="800" height="400" style="border:1px solid #000000;"></canvas> <!--Added a code that produces a border around the edge of the canvas. Makes a rectangle with a black border.-->	
-	<p><a onclick="draw_a();" class="w3-btn w3-black"> Draw Rectangle </a><p> <!--Button that calls the draw rectangle function.--> 
-	<p><a onclick="draw_Name();" class="w3-btn w3-black"> Draw Name </a><p> <!--Button that calls the draw name function.-->
-	<p><a onclick="draw_Image();" class="w3-btn w3-black"> Display Image </a><p> 
-	<p><a onclick="clear_Canvas();" class="w3-btn w3-black"> Clear All </a><p>
+	<canvas id= "s" width="800" height="400" style="border:1px solid #000000;"></canvas> <!--Added a code that produces a border around the edge of the canvas. Makes a rectangle with a black border where the image, name, and rectangle can all be drawn.-->	
+	<p><a onclick="draw_a();" class="w3-btn w3-black"> Draw Rectangle </a><p> <!--Button that calls the function to draw the rectangle on the canvas.--> 
+	<p><a onclick="draw_Name();" class="w3-btn w3-black"> Draw Name </a><p> <!--Button that calls the function to draw the name on the canvas.-->
+	<p><a onclick="draw_Image();" class="w3-btn w3-black"> Display Image </a><p> <!--Button that calls the function to draw the image on the canvas.-->
+	<p><a onclick="clear_Canvas();" class="w3-btn w3-black"> Clear All </a><p> <!--Button that calls the function to clear what is drawn on the canvas.-->
 							 
 	
 		
@@ -118,7 +118,7 @@ var s_canvas = document.getElementById("s");
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 
-<footer class="w3-bottom w3-container w3-flat-carrot">
+<footer class="w3-bottom w3-container w3-flat-carrot"> 
 	<p>DIY!</p>
 </footer>
 
